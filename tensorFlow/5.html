@@ -40,12 +40,12 @@
 		
 		
         var fitParam = {
-			epochs: 5000,
+			epochs: 1000,
 			callbacks:{
 				//얼마나 실행되었는가를 확인가능
 				onEpochEnd:
 				function(epoch, logs){
-					console.log('epoch', epoch, logs);
+					console.log('epoch', epoch, logs, 'RMSE=>', Math.sqrt(logs.loss));
 				}
 				
 			}
